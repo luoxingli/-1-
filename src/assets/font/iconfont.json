@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "714438",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "9874525",
+      "name": "KHCFDC_搜索",
+      "font_class": "sousuo1",
+      "unicode": "e6db",
+      "unicode_decimal": 59099
+    }
+  ]
+}

@@ -1,14 +1,47 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+    <div id="app"> 
+           
+      <router-view />
+  </div>  
+  
 </template>
 
+<script>
+//   home  用户引导
+//   banner广告页
+//   监听
+
+export default {
+  data(){
+    return{
+      // showactive  控制底部栏 在引导页和广告页不出现
+      showactive:false,
+      
+    }
+  },
+  methods:{
+  },
+  created(){
+
+  } , 
+  watch: {
+    // 监听路由跳转
+    "$route.path":function(newValue,oldValue) {
+      // 广告页不出现底部信息栏
+        if(newValue == "/banner"|| newValue == "/"){
+          this.showactive = false;
+        }else{
+          this.showactive = true;
+        }
+    }
+  },
+}
+</script>
 <style lang="scss">
+html, body,h1,h2,h3,h4,h5,p,img{
+  padding:0px;
+  margin:0px;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
